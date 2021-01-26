@@ -23,7 +23,7 @@ const devicesChannels = {
       'mqtts://mqtt.flespi.io', {
         ...mqttCredentials,
         port: 8883,
-        clientId: `action-on-google--${Math.random().toString(16).substr(2, 8)}`,
+        clientId: `report-state--${Math.random().toString(16).substr(2, 8)}`,
       },
     );
     console.log('connected');
