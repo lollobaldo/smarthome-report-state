@@ -76,9 +76,13 @@ const reportState = (id, state) => {
 const handleLight = (msg) => {
   console.log(msg);
   const { state, brightness, temperature } = message2state(msg);
-  const report = { on: state, brightness, color: {
-    temperatureK: map(temperature, 0, 255, 2000, 9000),
-  }};
+  const report = {
+    on: state,
+    brightness: map(brightness, 0, 255, 0, 100),
+    color: {
+      temperatureK: map(temperature, 0, 255, 2000, 9000),
+    }
+  };
   reportState('floor-lamp', report);
 };
 

@@ -1,4 +1,5 @@
 google-credentials.json
 mqtt-credentials.json
 
+debug.log
 node_modules
