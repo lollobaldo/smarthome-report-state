@@ -53,15 +53,14 @@ const messageHandler = (topic, message) => {
 };
 
 const reportState = (id, state) => {
+  console.log({[id]: state});
   app.reportState({
     requestId: uuidv4(),
     agentUserId: USER_ID,
     payload: {
       devices: {
         states: {
-          "floor-lamp": {
-            on: false
-          }
+          [id]: state
         }
       }
     }
